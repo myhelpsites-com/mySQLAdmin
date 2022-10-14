@@ -1,13 +1,16 @@
 import React from "react";
-import { InputGroup } from "../Input/Group/InputGroup"
+import { FormMeta } from "./FormMeta";
 
-export function ConstructorField({ meta }) {
-    function FormMeta() {
-        return (meta && meta.length > 0) ? meta.map(field => <InputGroup meta={field} />) : <></>
-    }
+interface Meta {
+    meta: Array<object>
+}
+
+export function ConstructorField(props: Meta): JSX.Element {
+    const { meta } = props;
+
     return (
         <>
-            <FormMeta />
+            {<FormMeta meta={meta} />}
         </>
     )
 }
