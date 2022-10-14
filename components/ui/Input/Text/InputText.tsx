@@ -1,3 +1,5 @@
+import React from "react";
+
 export function InputText({ path, placeholder, className, value }) {
     return (
         <>
