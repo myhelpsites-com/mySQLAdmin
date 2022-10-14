@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { Form } from '../components/ui/Form/Form'
 import styles from '../styles/Home.module.css'
+import { MetaHome } from '../components/meta/Home/MetaHome'
 
 export default function Home() {
   return (
@@ -13,10 +14,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <Form data={""}/>
+        <div className='w-300'>
+          <Form
+            data={MetaHome.fields}
+            submit={{
+              value: "Entrar",
+              className: "btn btn-primary w-100 h40"
+            }}
+          />
+        </div>
       </main>
-
-      
     </div>
   )
 }
